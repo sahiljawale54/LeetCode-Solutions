@@ -1,0 +1,16 @@
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        
+        vector<int> ans(nums.size());
+        
+        for(int i  = 0 ; i < nums.size() ; i++){
+            ans[ (i+k) % nums.size() ] = nums[i]; // %N GIVES VALUES BETWEEN 0-(N-1)
+        }
+        
+        nums = ans;
+    }
+};
+
+// TC- O(N)
+// SC - O(1)
